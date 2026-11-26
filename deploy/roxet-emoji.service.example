@@ -1,0 +1,15 @@
+[Unit]
+Description=RoXeT Emoji Extractor
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=CHANGE_USER
+WorkingDirectory=CHANGE_DIR
+ExecStart=CHANGE_DIR/.venv/bin/python emojibot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
